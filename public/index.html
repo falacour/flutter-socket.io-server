@@ -31,6 +31,18 @@
 
         });
 
+         //enviar mensaje desde flutter a pagina web a travez del servidor
+        socket.on('nuevo-mensaje', function(payload){
+            console.log('Escuchando a flutter', payload);
+        });
+
+        socket.on('bandas-activas', function(bandas){
+            console.clear();
+            console.table('Escuchando al servidor', bandas);
+        });
+
+
+
     </script>
 
 </body>
